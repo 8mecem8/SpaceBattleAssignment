@@ -4,7 +4,7 @@ import { Ship } from "./shipClass.js"
 
 export const createShips= async(gameWave) =>
 {
-    return new Promise((resolve, reject) => 
+    return new Promise(async (resolve, reject) => 
     {
 
         /* ------------- Create the Hero Ship ------------- */
@@ -32,7 +32,7 @@ export const createShips= async(gameWave) =>
         /* ------------- Enemy Ships enterence animation 1 by 1 ------------- */
         
         console.log('new ships are created !!!!!!!!!!!!!!!!!!!', enemies)
-        writeTextLog(`⚠️  Attention  ⚠️ Captain !!!!! Radars detected ${enemies.length} Enemy ships, Get ready to Engage !!!`)
+        setTimeout( async() => {await writeTextLog(`⚠️  Attention  ⚠️ Captain !!!!! Radars detected ${enemies.length} Enemy ships, Get ready to Engage !!!`)}, enemies.length > 3 ? 6000 : 3000);
         return resolve({hero,enemies})
     })
 }

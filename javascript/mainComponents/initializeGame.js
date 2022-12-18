@@ -2,10 +2,10 @@ import { drawMainGameScreen } from "../interfaceComponents/mainGame.js"
 import { gameEngine } from "./game/game.js"
 import {controlMusic} from "../mainComponents/music/music.js"
 
-export const initializeGame = () =>
+export const initializeGame = async() =>
 {
     document.querySelector(".mainMenu").remove() // deletethe message box element
-    drawMainGameScreen()
-    gameEngine()
-    controlMusic()
+    await drawMainGameScreen()
+    await gameEngine()
+    await controlMusic()
 }

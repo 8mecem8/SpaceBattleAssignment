@@ -24,8 +24,8 @@ export const Userinput = async(condition)=>
                                     switch (condition)
                                     {
                                         case "nextLevel":
-                                           return `👏💯 Well done !!! 🎯 Captain 💯👏<br><br>
-                                            You have destroyed all 👽 alien ships 🛸<br>
+                                           return `👏💯 Well done ! 🎯 Captain 💯👏<br><br>
+                                            You have destroyed all 👽 alien ships 🛸<br><br>
                                             Proceed to NEXT LEVEL !!!!
                                             `
                                             break;
@@ -57,7 +57,7 @@ export const Userinput = async(condition)=>
                                         {
                                             case "nextLevel":
                                             return `<input type="radio" id="useroption1" name="nextstep" value="nextLevel" />
-                                            <label for="useroption1">Continue to Next Level</label>
+                                            <label for="useroption1">to Next Level</label>
                                                 `
                                                 break;
                                             case "HERODEAD":

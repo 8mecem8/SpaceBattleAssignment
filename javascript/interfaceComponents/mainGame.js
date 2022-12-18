@@ -2,7 +2,7 @@
 
 
 
-export const drawMainGameScreen = ()=>
+export const drawMainGameScreen = async()=>
 {
 
 const main = document.querySelector("main")

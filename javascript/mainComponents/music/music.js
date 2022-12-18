@@ -1,11 +1,11 @@
 
 
-export const controlMusic = ()=>
+export const controlMusic = async()=>
 {
 
 
 /* ---------- Load the music file and play  ---------- */
-var audio = new Audio('sounds/theme.mp3', 100, true);
+var audio =  new Audio('sounds/theme.mp3', 100, true);
 audio.play();
 
 

@@ -16,8 +16,6 @@ export const gameEngine= async function()
     let {hero,enemies} = await createShips(gameWave)
     
     
-    
-    
 
     const startFight = async()=>
     {
@@ -44,8 +42,7 @@ export const gameEngine= async function()
                             
 
 
-                            
-
+                        
                             //we need to change the roles  after each attack happens
                             whosToAttack = whosToGetDamage
                             whosToGetDamage = whosToAttack == hero ? enemy : hero
@@ -79,11 +76,11 @@ export const gameEngine= async function()
 
             switch (result) {
                 case 'nextLevel':
-                    nextWave()
+                   await nextWave()
                     break;
 
                 case 'restart':
-                    restartGame()
+                   await restartGame()
                     break;
 
                 case 'repair':
@@ -98,47 +95,39 @@ export const gameEngine= async function()
 
         enemyArrayAfterFight.length <= 0 ? null : enemies = enemyArrayAfterFight
 
-        if(!enemies.length && hero.hull > 0)
-        {
-            
-            
-
-        }
     }
      
 
-    const nextWave = ()=>
+    const nextWave = async()=>
     {
         console.log('next !!!!!',enemies.length)
-        writeTextLog('Heyyyyyyy This is Awesome !!')
-        writeTextLog(`You have cleaned the ${gameWave}st Wave of Enemy Ships`)
-        writeTextLog("dont get relax !!!!!!")
-        writeTextLog("Be ready for next Wave !!!")
-        setTimeout(() => {Array.from(document.querySelectorAll("#mGS-section1-log-table > p")).forEach(arg => arg.remove()) /*Clean log screen */}, 4000);
+        await writeTextLog(`Heyyyyyyy This is Awesome !! You have cleaned the ${gameWave}st Wave of Enemy Ships`)
+        setTimeout( async() => {await writeTextLog("dont get relax , Be ready for next Wave !!!")}, 2500);
+        //setTimeout(() => {Array.from(document.querySelectorAll("#mGS-section1-log-table > p")).forEach(arg => arg.remove()) /*Clean log screen */}, 4000);
         console.log('nextGame function !!!!')
         gameWave++
-        gameEngine();
+        await gameEngine();
 
     }
 
     const heroDead = async()=>
     {
         let heroDeadResult = await Userinput("HERODEAD")
-        writeTextLog("User restarted the game")
-        writeTextLog("3.....2......1...")
-        writeTextLog("Get Ready !!!!!!")
+        await writeTextLog("User restarted the game")
+        await writeTextLog("3.....2......1...")
+        await writeTextLog("Get Ready !!!!!!")
         setTimeout(() => {restartGame()}, 2000);
 
     }
 
-    const restartGame= ()=>
+    const restartGame= async()=>
     {
         gameWave = 1; GameWaveValue.innerHTML = gameWave
 
         Array.from(document.querySelectorAll("#mGS-section1-log-table > p")).forEach(arg => arg.remove()) //Clean log screen
         Array.from(document.querySelectorAll(".enemy")).forEach(arg => arg.remove())//Remove old enemies
         
-        gameEngine();
+        await gameEngine();
         
     }
 
