@@ -1,0 +1,27 @@
+.musicControl{
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    right: 20px;
+    border: none;
+}
+
+.musicControl-button{
+    font-size: 39px;
+    padding: 0;
+    margin: 0;
+    background: #f0f6ff00;
+    border: none;
+}
+
+.musicControl-button:hover{
+    cursor: pointer;
+    scale: 1.1;
+   
+    border-radius: 7%;
+    background: #515ac36b;
+    
+    box-shadow: inset -1px 1px 20px 0px #ffffff33
+}

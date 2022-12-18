@@ -1,0 +1,22 @@
+footer{
+	text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+	
+	
+}
+
+footer  a:link, footer  a:visited,footer  a:active {
+	background: linear-gradient(0.95turn,#2bb13b, #bd4219,#00ff68,#b12a87);
+    text-decoration: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500
+}
+
+footer > p{
+	color: #2487dd;
+    user-select: none;
+}

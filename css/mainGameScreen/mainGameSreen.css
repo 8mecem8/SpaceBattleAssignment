@@ -1,0 +1,218 @@
+#mainGameScreen{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 5%;
+    border-radius: 37px;
+    border: 6px solid #43009f;
+    overflow: hidden;
+}
+
+
+#mGS-main-wrapper{
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr 1fr;
+    justify-items: center;
+    grid-template-rows: 1fr;
+    height: 100%;
+    width: 100%;
+}
+
+#mGS-section1{
+    height: 100%;
+    width: 100%;
+    background:url(../../images/world.gif);
+    background-size: cover;
+    background-position: top;
+}
+
+#mGS-section1-log{
+    width: 100%;
+    height: 100%;
+    background: #11161d00;
+}
+
+#mGS-section1-log-wrapper{
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-top: 15px;
+    flex-direction: column;
+    color: #affd62;
+    font-family: 'dogica';
+    position: relative;
+}
+
+#mGS-section1-log-wrapper>h3{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    
+}
+
+#mGS-section1-log-table{
+    font-size: 12px;
+    height: 100%;
+    position: absolute;
+    top: 54px;
+    overflow: auto;
+    scrollbar-width: none; /* for Firefox */
+}
+#mGS-section1-log-table::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+.logScreenText{
+    padding-left: 20px;
+    line-height: 18px;
+}
+
+
+
+#mGS-section2{
+    background: brown;
+    height: 100%;
+    width: 100%;
+}
+
+
+#mGS-section2-info{
+    font-family: monospace;
+    text-align: center;
+    font-size: 1.6em;
+    background: #32363a4f;
+    padding: 7px;
+    color: darksalmon;
+    font-weight: 900;
+    border-bottom-right-radius: 139px;
+    border-bottom-left-radius: 140px;
+}
+
+#mGS-section2-hero-ship{
+    height: 100%;
+    width: 100%;
+    background-image: url(../../images/ship.webp);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#mGS-section2-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+#mGS-section2-buttons > button{
+    cursor:pointer;
+}
+
+#mGS-section2-buttons > button:nth-child(1){
+    width: 129px;
+    height: 5px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(45deg, transparent 11%, #e30035ba 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    
+}
+
+#mGS-section2-buttons > button:nth-child(1):hover{
+    background: linear-gradient(45deg, transparent 11%, #ff1b50 5%);
+    
+}
+
+#mGS-section2-buttons > button:nth-child(2){
+    width: 129px;
+    height: 5px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(-45deg, transparent 11%, #e30035ba 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#mGS-section2-buttons > button:nth-child(2):hover{
+    background: linear-gradient(-45deg, transparent 11%, #ff1b50 5%);
+}
+
+
+#mGS-section3{
+    background: rgb(17 22 29 / 94%);
+    height: 100%;
+    width: 100%;
+    
+}
+
+#mGS-section3-wave{
+    transform: translateY(7px);
+    font-family: 'dogica';
+    color: #f700f7;
+    text-align: right;
+    margin-right: 25px;
+}
+
+#mGS-section3-field-enemy{
+    background: rgb(17 22 29 / 94%);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.enemy{
+    width: 102px;
+    height: 92px;
+    background: url(../../images/alien.gif);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.enemy:nth-child(even){
+    transform: translate3d(100vh,100vh,0);
+
+}
+.enemy:nth-child(odd){
+    transform: translate3d(100vh,-100vh,0);
+
+}
+
+.enemy::after{
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 3px;
+    background-color: #15c738;
+    margin: 0 27px;
+}
+
+.enemy::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 3px;
+    background-color: #ff1b50;
+    margin: 0 27px;
+}

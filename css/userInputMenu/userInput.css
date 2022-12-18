@@ -1,0 +1,147 @@
+#userSelectMain{
+    user-select: none;
+    color: lightcyan;
+    font-family: dogica;
+    position: fixed;
+    background-color: transparent;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 25%;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-45%);
+}
+
+#userSelectMainContainer{
+    background-color: rgb(149 4 4 / 73%);
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 19px;
+    box-shadow: 0px 1px 2px 0px rgb(255 0 0 / 70%), 1px 2px 4px 0px rgb(255 0 0 / 70%), 2px 4px 8px 0px rgb(255 0 0 / 70%), 2px 4px 16px 0px rgb(255 0 0 / 70%), inset 0px 10px 20px 2px rgb(255 0 0 / 70%), inset 10px 10px 15px rgb(255 0 0 / 70%);
+}
+
+
+#userSelectMessage{
+    border-radius: 10px;
+    line-height: 25px;
+    letter-spacing: -5px;
+    font-size: 19px;
+    -webkit-font-smoothing: antialiased;
+    background: #52494926;
+    text-shadow: 5px 2px 3px black;
+    padding: 20px 4px 4px 4px;
+}
+
+#userSelectButtonCon{
+    display: flex;
+    justify-content: center;
+    font-size: 11px;
+    align-items: center;
+    line-height: 24px;
+}
+
+#userSelectButtonCon >fieldset {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#userSelectButtonCon >fieldset > legend {
+    font-size: 9px;
+    line-height: 40px;
+    color: #bbac63;
+}
+
+#userSelectButtonCon >fieldset > label {
+    line-height: 38px;
+    font-size: 19px;
+    margin: 6px 0 0;
+    border: 5px #991414 solid;
+    border-radius: 5px;
+    padding-left: 5px;
+    background: #b51a1acf;
+
+}
+#userSelectButtonCon >fieldset > input {
+    appearance: none;
+    
+
+}
+
+#userSelectButtonCon >fieldset > input:checked {
+    appearance: none;
+    width: 383px;
+    height: 7px;
+    border: 2px solid #999;
+    background: #18ff09;
+    position: relative;
+    top: 50px;
+    
+}
+
+
+
+
+#userSelectButtonCon >fieldset > button {
+    width: 50%;
+    margin: 18px 0 0;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 39px;
+    align-items: center;
+    border-radius: 5px;
+    background: #931919e8;
+    font-family: 'dogica';
+    font-size: 24px;
+    border: 4px #c1711c solid;
+    color: #88d568;
+    font-weight: 900;
+    transition: all .3s ease-in-out;
+}
+
+
+#userSelectButtonCon >fieldset > button:hover:not(:disabled) {
+    width: 50%;
+    margin: 18px 0 0;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 39px;
+    align-items: center;
+    border-radius: 5px;
+    background: #e93939e8;
+    font-family: 'dogica';
+    font-size: 24px;
+    border: 4px #e1bb94 solid;
+    color: #cfffbb;
+    font-weight: 900;
+    scale: 1.2;
+}
+
+
+#userSelectButtonCon >fieldset > button:disabled {
+    width: 50%;
+    margin: 18px 0 0;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 39px;
+    align-items: center;
+    border-radius: 5px;
+    background: #625e5ee8;
+    font-family: 'dogica';
+    font-size: 24px;
+    border: 4px #999590 solid;
+    color: #565353;
+}
