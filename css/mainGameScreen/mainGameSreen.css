@@ -8,6 +8,7 @@
     border-radius: 37px;
     border: 6px solid #43009f;
     overflow: hidden;
+    box-shadow: 0 0 7px #43009f, 0 0 42px #43009f, 0 0 1px #43009f, 0 0 11px #43009f, 0 0 10px #43009f, 0 0 10px #43009f, 0 0 37px #43009f, 0 0 41px #43009f;
 }
 
 
@@ -44,6 +45,7 @@
     color: #affd62;
     font-family: 'dogica';
     position: relative;
+    text-shadow: 0 0 5px #003eff, 4px -2px 6px #ff0606, 0 0 8px #d1eb43, 0 0 7px #6942e9, 0 0 1px #4822e3, 0 0 20px #6400ff, 0 0 20px #00ffa1, 0 0 0px #0098ff;
 }
 
 #mGS-section1-log-wrapper>h3{
@@ -89,6 +91,8 @@
     font-weight: 900;
     border-bottom-right-radius: 139px;
     border-bottom-left-radius: 140px;
+    box-shadow: 0 0 4px #0e85a3, 1px 1px 8px #06e9ff, 0 0 0px #d1eb43, 0 0 5px #6942e9, 0 0 7px #4822e3, 0 0 0px #6400ff, 0 0 0px #00ffa1, 0 0 0px #0098ff;
+    text-shadow: 0 0 4px #003eff, 0 0 8px #ff0606, 0px 0px 6px #43adeb, 0 0 7px #6942e9, 0 0 3px #4822e3, 0 0 0px #6400ff, 0 0 0px #00ffa1, 0 0 0px #0098ff;
 }
 
 #mGS-section2-hero-ship{
@@ -169,10 +173,13 @@
     color: #f700f7;
     text-align: right;
     margin-right: 25px;
+    text-shadow: 0 0 3px #ff00a1, 0 0 2px #ff0606, 0px 0px 4px #43eb48, 0 0 1px #6942e9, 0 0 3px #4822e3, 0 0 0px #6400ff, 0 0 1px #00ffa1, 0 0 0px #0098ff;
+    background: transparent;
 }
 
 #mGS-section3-field-enemy{
-    background: rgb(17 22 29 / 94%);
+    background: url(../../images/stars.gif);
+    background-size: cover;
     height: 100%;
     width: 100%;
     display: grid;

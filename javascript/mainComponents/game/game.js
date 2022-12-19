@@ -35,10 +35,12 @@ export const gameEngine= async function()
             while(enemy.hull > 0 && hero.hull > 0)
             {
                 switch (true) {
-                    case Math.random() < whosToAttack.accuracy:
+                    case Math.random() < whosToAttack.accuracy: //random chance to attack
+                            await writeTextLog(`${whosToAttack.id == 'HERO' ? "Your Ship" : "Enemy Ship"} is attacking now with ${whosToAttack.firepower} firepower`)
                             console.log('before ',whosToAttack,whosToGetDamage)
                             whosToAttack.attack(whosToGetDamage)
                             console.log('after ',whosToAttack,whosToGetDamage)
+                            await writeTextLog(`${whosToGetDamage.id == 'HERO' ? "Your Ship" : "Enemy Ship"} got damage ,Hull's integrity is ${whosToGetDamage.hull}`)
                             
 
 
@@ -55,6 +57,8 @@ export const gameEngine= async function()
                             whosToAttack = whosToGetDamage
                             whosToGetDamage = whosToAttack == hero ? enemy : hero
                             console.log('chance missed after',whosToAttack,whosToGetDamage)
+                            await writeTextLog(`${whosToGetDamage.id == 'HERO' ? "Your Ship" : "Enemy Ship"} missed !! now it's ${whosToAttack.id == 'HERO' ? "Your Ship" : "Enemy Ship"} turn to attack`)
+
                         break;
                 }
             }
@@ -80,7 +84,7 @@ export const gameEngine= async function()
                     break;
 
                 case 'restart':
-                   await restartGame()
+                   await restartGame();enemies=[];break;return
                     break;
 
                 case 'repair':
@@ -94,7 +98,7 @@ export const gameEngine= async function()
         } 
 
         enemyArrayAfterFight.length <= 0 ? null : enemies = enemyArrayAfterFight
-
+        
     }
      
 
@@ -137,13 +141,13 @@ export const gameEngine= async function()
     /* When user clicks hero starts fight sequence  */
     document.querySelector("#mGS-section2-button1").addEventListener('click',startFight)
 
+    let asd = 0
     const run = function()
     {
-        
+        asd++
         ShipHullValue.innerHTML = hero.hull
         GameWaveValue.innerHTML = gameWave
         
-
 
         requestAnimationFrame(run)
     }

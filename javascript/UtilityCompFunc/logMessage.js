@@ -1,7 +1,7 @@
 
 export const writeTextLog = async (text = "String limit to 29 letters ")=>
 {
-        new Promise( async(resolve, reject) => {
+    return new Promise( async(resolve, reject) => {
                 
         
                 /* ---------- Load the music file and play  ---------- */
