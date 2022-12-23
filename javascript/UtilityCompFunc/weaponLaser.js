@@ -42,7 +42,7 @@ export const drawWeaponLaser = async(attacker,defender)=>
         wLaser.style.transform =`translate3d(${enemyPositon - (enemyWidth / 2) - (laserWidth / 8) - laserPosition}px,${0}px,0px)`
         wLaser.style.width = '0px'
 
-         setTimeout(() => {audio.pause(); wLaser.remove()   }, 2000);
+         setTimeout( async() => {audio.pause(); wLaser.remove();  resolve()   }, 2000);
     })
 
 
