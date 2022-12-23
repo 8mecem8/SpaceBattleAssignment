@@ -27,6 +27,9 @@ export class Ship
         const enemyDiv = document.createElement("div");
         enemyDiv.className = 'enemy'
         enemyDiv.id = `enemy${i}`
+        enemyDiv.setAttribute("data-number", `${i}`);
+        enemyDiv.style.animationDelay = `${i/3}`
+        enemyDiv.style.animationDuration = `${i/3+1}s`
 
         enemyDiv.innerHTML= `
             

@@ -1,0 +1,86 @@
+
+
+#mGS-section2{
+    background: brown;
+    height: 100%;
+    width: 100%;
+}
+
+
+#mGS-section2-info{
+    font-family: monospace;
+    text-align: center;
+    font-size: 1.6em;
+    background: #32363a4f;
+    padding: 7px;
+    color: darksalmon;
+    font-weight: 900;
+    border-bottom-right-radius: 139px;
+    border-bottom-left-radius: 140px;
+    box-shadow: 0 0 4px #0e85a3, 1px 1px 8px #06e9ff, 0 0 0px #d1eb43, 0 0 5px #6942e9, 0 0 7px #4822e3, 0 0 0px #6400ff, 0 0 0px #00ffa1, 0 0 0px #0098ff;
+    text-shadow: 0 0 4px #003eff, 0 0 8px #ff0606, 0px 0px 6px #43adeb, 0 0 7px #6942e9, 0 0 3px #4822e3, 0 0 0px #6400ff, 0 0 0px #00ffa1, 0 0 0px #0098ff;
+}
+
+#mGS-section2-hero-ship{
+    height: 100%;
+    width: 100%;
+    background-image: url(../../images/ship.webp);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#mGS-section2-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+#mGS-section2-buttons > button{
+    cursor:pointer;
+}
+
+#mGS-section2-buttons > button:nth-child(1){
+    width: 129px;
+    height: 5px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(45deg, transparent 11%, #e30035ba 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    
+}
+
+#mGS-section2-buttons > button:nth-child(1):hover{
+    background: linear-gradient(45deg, transparent 11%, #ff1b50 5%);
+    
+}
+
+#mGS-section2-buttons > button:nth-child(2){
+    width: 129px;
+    height: 5px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(-45deg, transparent 11%, #e30035ba 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#mGS-section2-buttons > button:nth-child(2):hover{
+    background: linear-gradient(-45deg, transparent 11%, #ff1b50 5%);
+}

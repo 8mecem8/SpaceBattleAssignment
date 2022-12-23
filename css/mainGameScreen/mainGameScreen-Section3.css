@@ -1,0 +1,90 @@
+
+
+#mGS-section3{
+    background: rgb(17 22 29 / 94%);
+    height: 100%;
+    width: 100%;
+    
+}
+
+#mGS-section3-wave{
+    transform: translateY(7px);
+    font-family: 'dogica';
+    color: #f700f7;
+    text-align: right;
+    margin-right: 25px;
+    text-shadow: 0 0 3px #ff00a1, 0 0 2px #ff0606, 0px 0px 4px #43eb48, 0 0 1px #6942e9, 0 0 3px #4822e3, 0 0 0px #6400ff, 0 0 1px #00ffa1, 0 0 0px #0098ff;
+    background: transparent;
+}
+
+#mGS-section3-field-enemy{
+    background: url(../../images/stars.gif);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.enemy{
+    width: 102px;
+    height: 92px;
+    background: url(../../images/alien.gif);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+}
+
+.enemy:nth-child(even){
+    transform: translate3d(100vh,100vh,0);
+    animation: ufoMoveEven linear infinite;
+ 
+
+}
+.enemy:nth-child(odd){
+    transform: translate3d(100vh,-100vh,0);
+    animation: ufoMoveOdd ease-in-out infinite;
+
+
+}
+
+.enemy::after{
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 3px;
+    background-color: #15c738;
+    margin: 0 27px;
+}
+
+.enemy::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 3px;
+    background-color: #ff1b50;
+    margin: 0 27px;
+}
+
+
+
+
+@keyframes ufoMoveEven {
+    0% { -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg); }
+    50%  { -webkit-transform: rotate(180deg) translateX(2px) rotate(-180deg); }
+    100% { -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg); }
+
+  }
+
+
+  @keyframes ufoMoveOdd {
+    0%    { transform: translate3d(0px,0px,0px); }
+    20%   { transform: translate3d(-10px,-10px,0px); }
+    30%   { transform: translate3d(-15px,-15px,0px); }
+    40%   { transform: translate3d(-20px,-18px,0px); }
+    80%   { transform: translate3d(10px,-20px,0px); }
+    100%  { transform: translate3d(0px,0px,0px); }
+  }
