@@ -1,6 +1,7 @@
 import "../../interfaceComponents/startMenu.js"
 import { Userinput } from "../../UtilityCompFunc/getUserInput.js"
 import { writeTextLog } from "../../UtilityCompFunc/logMessage.js"
+import { drawWeaponLaser } from "../../UtilityCompFunc/weaponLaser.js"
 import { createShips } from "../gameAssets/createShips.js"
 
 
@@ -38,6 +39,7 @@ export const gameEngine= async function()
                     case Math.random() < whosToAttack.accuracy: //random chance to attack
                             await writeTextLog(`${whosToAttack.id == 'HERO' ? "Your Ship" : "Enemy Ship"} is attacking now with ${whosToAttack.firepower} firepower`)
                             console.log('before ',whosToAttack,whosToGetDamage)
+                            await drawWeaponLaser(undefined,whosToGetDamage)
                             whosToAttack.attack(whosToGetDamage)
                             console.log('after ',whosToAttack,whosToGetDamage)
                             await writeTextLog(`${whosToGetDamage.id == 'HERO' ? "Your Ship" : "Enemy Ship"} got damage ,Hull's integrity is ${whosToGetDamage.hull}`)
