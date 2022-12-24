@@ -19,30 +19,46 @@ export const drawWeaponLaser = async(attacker,defender)=>
 
         const wLaser = document.createElement("div");
         wLaser.id = 'weaponLaser'
-        //wLaser.style.width = '200px'
 
 
         wLaser.innerHTML= `
             
         `
 
+        let enemyPositonY = defender.id == "HERO" ? document.querySelector(`#enemy${attacker.id}`).getBoundingClientRect().y : document.querySelector(`#enemy${defender.id}`).getBoundingClientRect().y
+        let angle = attacker.id == "HERO"?  enemyPositonY < 300 ? -27 :  enemyPositonY > 500 ? 36 : 0 :0
 
+        if(attacker.id == "HERO")
+        {wLaser.style.transform =`rotateZ(${angle}deg)`}
+
+        //Movement in Y axis
+        wLaser.style.top = `${(enemyPositonY )}px`
 
         fragment.appendChild(wLaser)
         main.insertBefore(fragment,null)
 
         
-        
+        /* --------------- Laser Css animation -------------- */
         wLaser.style.width = '200px'
-        let enemyPositon = defender.id == "HERO" ? 0 : document.querySelector(`#enemy${defender.id}`).getBoundingClientRect().x
+        let enemyPositonX = defender.id == "HERO" ? 0 : document.querySelector(`#enemy${defender.id}`).getBoundingClientRect().x
         let enemyWidth = defender.id == "HERO" ? 0 :  document.querySelector(`#enemy${defender.id}`).getBoundingClientRect().width
         let laserWidth = wLaser.getBoundingClientRect().width
-        let laserPosition = wLaser.getBoundingClientRect().x
+        let laserPositionX = wLaser.getBoundingClientRect().x
 
-        wLaser.style.transform =`translate3d(${enemyPositon - (enemyWidth / 2) - (laserWidth / 8) - laserPosition}px,${0}px,0px)`
+        //let enemyHeight = defender.id == "HERO" ? 0 :  document.querySelector(`#enemy${defender.id}`).getBoundingClientRect().height
+
+
+        //Movement in x axis
+        wLaser.style.transform =`translateX(${enemyPositonX + (enemyWidth / 2) - (laserWidth / 8) - laserPositionX}px) rotateZ(${angle}deg)`
         wLaser.style.width = '0px'
 
-         setTimeout( async() => {audio.pause(); wLaser.remove();  resolve()   }, 2000);
+        
+
+
+        /* --------------- Laser Css animation -------------- */
+
+        //Stop sound, remove html element, fulfill promise
+        setTimeout( async() => {audio.pause(); wLaser.remove();  resolve()   }, 3000);
     })
 
 

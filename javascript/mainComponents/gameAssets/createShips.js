@@ -33,6 +33,7 @@ export const createShips= async(gameWave) =>
         
         console.log('new ships are created !!!!!!!!!!!!!!!!!!!', enemies)
         setTimeout( async() => {await writeTextLog(`⚠️  Attention  ⚠️ Captain !!!!! Radars detected ${enemies.length} Enemy ships, Get ready to Engage !!!`)}, enemies.length > 3 ? 6000 : 3000);
+        
         return resolve({hero,enemies})
     })
 }

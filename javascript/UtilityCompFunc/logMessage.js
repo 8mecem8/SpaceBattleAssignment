@@ -2,6 +2,8 @@
 export const writeTextLog = async (text = "String limit to 29 letters ")=>
 {
     return new Promise( async(resolve, reject) => {
+                //To prvent bug we need to disable the attack button
+                document.querySelector(`#mGS-section2-button1`).disabled = true
                 
         
                 /* ---------- Load the music file and play  ---------- */
@@ -27,15 +29,15 @@ export const writeTextLog = async (text = "String limit to 29 letters ")=>
                 let letter = textToWrite.shift()
                 logText.innerHTML += `${letter}`
 
-                if(textToWrite.length){setTimeout(async () => { await textToWriteFunc()}, 100);}
-                if(!textToWrite.length){resolve();audio.pause()}
+                if(textToWrite.length){setTimeout(async () => { await textToWriteFunc()}, 30);}
+                if(!textToWrite.length){resolve();audio.pause();text.includes('Engage')? document.querySelector(`#mGS-section2-button1`).disabled = false : null}
                 
                 /* This method always scrolls the spesific element to the bottom when this function called */
                         logTable.scrollTo(0, logTable.scrollHeight)
                 }
                 await textToWriteFunc()
 
-
+                
 
                 
                 fragment.appendChild(logText)

@@ -84,3 +84,28 @@
 #mGS-section2-buttons > button:nth-child(2):hover{
     background: linear-gradient(-45deg, transparent 11%, #ff1b50 5%);
 }
+
+
+/*when buttons are disabled */
+#mGS-section2-buttons > button:nth-child(1):disabled{
+    width: 129px;
+    height: 5px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(45deg, transparent 11%, #6c021bba 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    cursor: not-allowed;
+}
+
+#mGS-section2-buttons > button:nth-child(1):disabled:hover{
+    background: linear-gradient(45deg, transparent 11%, #6c021bba 5%);
+    cursor: not-allowed;
+    
+}

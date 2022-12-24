@@ -20,6 +20,7 @@ export const gameEngine= async function()
 
     const startFight = async()=>
     {
+        
 
             while(enemies.length && hero.hull > 0)
         {
@@ -39,7 +40,7 @@ export const gameEngine= async function()
                     case Math.random() < whosToAttack.accuracy: //random chance to attack
                             await writeTextLog(`${whosToAttack.id == 'HERO' ? "Your Ship" : "Enemy Ship"} is attacking now with ${whosToAttack.firepower} firepower`)
                             console.log('before ',whosToAttack,whosToGetDamage)
-                            await drawWeaponLaser(undefined,whosToGetDamage)
+                            await drawWeaponLaser(whosToAttack,whosToGetDamage)
                             whosToAttack.attack(whosToGetDamage)
                             console.log('after ',whosToAttack,whosToGetDamage)
                             await writeTextLog(`${whosToGetDamage.id == 'HERO' ? "Your Ship" : "Enemy Ship"} got damage ,Hull's integrity is ${whosToGetDamage.hull}`)
