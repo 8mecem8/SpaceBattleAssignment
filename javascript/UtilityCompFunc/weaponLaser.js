@@ -10,6 +10,7 @@ export const drawWeaponLaser = async(attacker,defender)=>
         /* ---------- Load the music file and play  ---------- */
         var audio =  new Audio('sounds/laserShoot.mp3', 100, true);
         audio.play();
+        /* ---------- Load the music file and play  ---------- */
 
      
         const main = document.querySelector("main")
@@ -21,10 +22,10 @@ export const drawWeaponLaser = async(attacker,defender)=>
         wLaser.id = 'weaponLaser'
 
 
-        wLaser.innerHTML= `
-            
-        `
+        wLaser.innerHTML= ``//may be gonna need this method keep it 
 
+
+        /* --------------- Laser Css animation Before inserting the element -------------- */
         let enemyPositonY = defender.id == "HERO" ? document.querySelector(`#enemy${attacker.id}`).getBoundingClientRect().y : document.querySelector(`#enemy${defender.id}`).getBoundingClientRect().y
         let angle = attacker.id == "HERO"?  enemyPositonY < 300 ? -27 :  enemyPositonY > 500 ? 36 : 0 :0
 
@@ -33,11 +34,15 @@ export const drawWeaponLaser = async(attacker,defender)=>
 
         //Movement in Y axis
         wLaser.style.top = `${(enemyPositonY )}px`
+        /* --------------- Laser Css animation Before inserting the element -------------- */
+
+
 
         fragment.appendChild(wLaser)
         main.insertBefore(fragment,null)
 
         
+
         /* --------------- Laser Css animation -------------- */
         wLaser.style.width = '200px'
         let enemyPositonX = defender.id == "HERO" ? 0 : document.querySelector(`#enemy${defender.id}`).getBoundingClientRect().x
@@ -45,17 +50,12 @@ export const drawWeaponLaser = async(attacker,defender)=>
         let laserWidth = wLaser.getBoundingClientRect().width
         let laserPositionX = wLaser.getBoundingClientRect().x
 
-        //let enemyHeight = defender.id == "HERO" ? 0 :  document.querySelector(`#enemy${defender.id}`).getBoundingClientRect().height
-
-
         //Movement in x axis
         wLaser.style.transform =`translateX(${enemyPositonX + (enemyWidth / 2) - (laserWidth / 8) - laserPositionX}px) rotateZ(${angle}deg)`
         wLaser.style.width = '0px'
-
-        
-
-
         /* --------------- Laser Css animation -------------- */
+
+
 
         //Stop sound, remove html element, fulfill promise
         setTimeout( async() => {audio.pause(); wLaser.remove();  resolve()   }, 3000);

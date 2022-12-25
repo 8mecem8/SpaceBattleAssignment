@@ -1,4 +1,5 @@
 import "../../interfaceComponents/startMenu.js"
+import "../../interfaceComponents/infoPopUp.js"
 import { Userinput } from "../../UtilityCompFunc/getUserInput.js"
 import { writeTextLog } from "../../UtilityCompFunc/logMessage.js"
 import { drawWeaponLaser } from "../../UtilityCompFunc/weaponLaser.js"
@@ -38,20 +39,16 @@ export const gameEngine= async function()
             {
                 switch (true) {
                     case Math.random() < whosToAttack.accuracy: //random chance to attack
-                            await writeTextLog(`${whosToAttack.id == 'HERO' ? "Your Ship" : "Enemy Ship"} is attacking now with ${whosToAttack.firepower} firepower`)
+                            await writeTextLog(`${whosToAttack.id == 'HERO' ? "Your Ship" : "Enemy Ship"} is attacking now with 100% of ${whosToAttack.firepower} firepower`)
                             console.log('before ',whosToAttack,whosToGetDamage)
                             await drawWeaponLaser(whosToAttack,whosToGetDamage)
                             whosToAttack.attack(whosToGetDamage)
                             console.log('after ',whosToAttack,whosToGetDamage)
-                            await writeTextLog(`${whosToGetDamage.id == 'HERO' ? "Your Ship" : "Enemy Ship"} got damage ,Hull's integrity is ${whosToGetDamage.hull}`)
+                            await writeTextLog(`${whosToGetDamage.id == 'HERO' ? "Your Ship" : "Enemy Ship"} got damage ${whosToGetDamage.hull <= 0? "and Destroyed !!" : "It's Hull's integrity is " + whosToGetDamage.hull }`) //It's Hull's integrity is ${whosToGetDamage.hull}
                             
-
-
-                        
                             //we need to change the roles  after each attack happens
                             whosToAttack = whosToGetDamage
                             whosToGetDamage = whosToAttack == hero ? enemy : hero
-                            
                         break;
                 
                     default: console.log('chance missed')
@@ -60,7 +57,7 @@ export const gameEngine= async function()
                             whosToAttack = whosToGetDamage
                             whosToGetDamage = whosToAttack == hero ? enemy : hero
                             console.log('chance missed after',whosToAttack,whosToGetDamage)
-                            await writeTextLog(`${whosToGetDamage.id == 'HERO' ? "Your Ship" : "Enemy Ship"} missed !! now it's ${whosToAttack.id == 'HERO' ? "Your Ship" : "Enemy Ship"} turn to attack`)
+                            await writeTextLog(`${whosToGetDamage.id == 'HERO' ? "Your Ship" : "Enemy Ship"} missed !! now it's ${whosToAttack.id == 'HERO' ? "Your Ship" : "Other Ship`s"} turn to attack`)
 
                         break;
                 }
@@ -108,8 +105,8 @@ export const gameEngine= async function()
     const nextWave = async()=>
     {
         console.log('next !!!!!',enemies.length)
-        await writeTextLog(`Heyyyyyyy This is Awesome !! You have cleaned the ${gameWave}st Wave of Enemy Ships`)
-        setTimeout( async() => {await writeTextLog("dont get relax , Be ready for next Wave !!!")}, 2500);
+        await writeTextLog(`Heyyyyyyy This is Awesome !! You have cleaned the ${gameWave}st Wave of Ufo Ships`)
+        setTimeout( async() => {await writeTextLog("Dont get relaxed , Get ready for The Next Wave !!!")}, 2500);
         //setTimeout(() => {Array.from(document.querySelectorAll("#mGS-section1-log-table > p")).forEach(arg => arg.remove()) /*Clean log screen */}, 4000);
         console.log('nextGame function !!!!')
         gameWave++

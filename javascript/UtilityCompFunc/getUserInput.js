@@ -1,6 +1,6 @@
 
 
-export const Userinput = async(condition)=>
+export const Userinput = async(condition,righttoRepair)=>
 {
     return new Promise((resolve, reject) => 
     {
@@ -69,7 +69,7 @@ export const Userinput = async(condition)=>
                                             return `<input type="radio" id="useroption1" name="nextstep" value="continue" />
                                             <label for="useroption1">Continue to Fight !!</label>
                                         
-                                            <input type="radio" id="useroption2" name="nextstep" value="repair" />
+                                            <input type="radio" id="useroption2" name="nextstep" value="repair" disabled="${righttoRepair =="true" ? false : true}" />
                                             <label for="useroption2">Repair the hull !!</label>
                                         
                                         

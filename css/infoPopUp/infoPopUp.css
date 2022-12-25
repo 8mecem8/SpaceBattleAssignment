@@ -1,0 +1,92 @@
+#infoButtonFixed{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    scale: 1.6;
+    z-index: 102;
+    border-radius: 50%;
+    transform: scaleX(1.2);
+    -webkit-font-smoothing: antialiased;
+    transition: all 1s ;
+
+}
+
+#infoButtonFixed:hover{
+    transform: scaleX(1.2) rotate(360deg);
+    cursor: pointer;
+}
+
+#infoButtonFixed::after{
+content: "";
+color: transparent;
+transition-delay: 1s;
+}
+
+#infoButtonFixed:hover::after{
+    content: "Click for more info";
+    width: max-content;
+    height: min-content;
+    position: absolute;
+    color: #ffffff;
+    font-size: 9px;
+    top: 5px;
+    background: black;
+    left: 21px;
+    font-family: monospace;
+    text-transform: uppercase;
+
+}
+
+#infoPopUp{
+    z-index: 101;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #0d0e0ee0;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    flex-direction: column;
+
+}
+
+#infoPopUpContainer{
+    background: linear-gradient(0.05turn, #3f87a6, #ebf8e1, #3cc2f6);
+    border-radius: 14px;
+    padding: 20px;
+    height: min-content;
+    width: max-content;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-family: monospace;
+    position: relative;
+}
+
+
+#infoPopUpMessage{
+
+}
+
+
+#infoPopUpButton{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+#infoPopUpOkay{
+    display: flex;
+    font-weight: 900;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    border: none;
+    font-size: 21px;
+    text-shadow: 0px 0px 3px #6e6767;
+}

@@ -2,6 +2,7 @@
 
 @import url("./home/home.css");
 @import url("./startMenu/startMenu.css");
+@import url("./infoPopUp/infoPopUp.css");
 @import url("./mainGameScreen/mainGameSreen.css");
 @import url("./mainGameScreen/musicControl.css");
 @import url("./userInputMenu/userInput.css");

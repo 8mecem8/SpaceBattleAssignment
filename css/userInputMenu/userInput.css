@@ -72,6 +72,12 @@
     background: #b51a1acf;
 
 }
+
+#userSelectButtonCon >fieldset > input:disabled+label {
+    filter: brightness(0.5);
+}
+
+
 #userSelectButtonCon >fieldset > input {
     appearance: none;
     

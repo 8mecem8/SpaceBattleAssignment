@@ -30,7 +30,7 @@ mGScreen.innerHTML= `
         <div id="mGS-section2">
             
             <div id="mGS-section2-hero-ship">
-                <p id="mGS-section2-info">Hull Health: <span>20</span></p>
+                <p id="mGS-section2-info">Hull Integrity: <span>20</span></p>
                 <div id="mGS-section2-buttons">
                     <button id="mGS-section2-button1" type="button">Attack</button>
 
