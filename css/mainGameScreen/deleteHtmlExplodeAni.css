@@ -1,0 +1,197 @@
+
+#ufo{
+	position:relative;
+	display:flex;
+	flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  top:28px;
+}
+
+/*--------------- Stick elements section ---------------*/
+.stick{
+	position: absolute;
+    width: 0px;
+    height: 1.1px;
+    translate: 0px 0px 10px;
+    background-color: red;
+    /* box-shadow: 0px 0px 16px 14px rgb(253 247 0); */
+    transform: rotate(calc(360deg / 6 * var(--i)));
+    animation: sticks;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-direction: normal;
+  
+	
+}
+
+
+@keyframes sticks {
+  0% {
+		opacity: 0;
+        box-shadow: 0px 0px 16px 14px rgb(253 247 0);
+    
+	}
+	5% {
+		opacity: 0.5;
+	}
+	40% {
+		opacity: 0;
+        transform:rotate(calc(360deg / 6 * var(--i))) translateX(200px);
+        width:100px;
+        box-shadow: 0px 0px 16px 14px rgb(253 0 0 / 98%);
+
+	}
+	100% {
+		opacity: 0;
+	}
+
+  }
+
+/*--------------- Stick elements section ---------------*/
+
+
+/*--------------- circle element section ---------------*/
+#circle{
+    display: inline-block;
+    position: absolute;
+    transform-origin: center center;
+    scale: 0;
+    width: 2px;
+    height: 2px;
+    border: 22.001px double #e30000;
+    border-radius: 100%;
+    box-shadow: 0px 0px 12px 11px hsl(0deg 100% 42%), inset 0px 0px 8px 20px #d11d1d, 0px 0px 19px 20px #d9e70c;
+    animation: circle;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+
+
+
+@keyframes circle {
+    0% {
+        /* opacity: 0; */
+        scale: 1;
+    }
+    5% {
+        /* opacity: 0.5; */
+    }
+    
+    40% {
+        opacity: 0;
+        transform: scale(7);
+        border: 5.01px double red;
+        width: 100px;
+        height: 100px;
+    }
+    100% {
+        opacity: 0;
+        scale: 0;
+    }
+}
+/*--------------- circle element section ---------------*/
+
+
+
+
+
+
+/*--------------- triangle element section ---------------*/
+
+.triangle{
+    position:absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 2.5px 5px 2.5px;
+      border-color: transparent transparent transparent transparent;
+      transform: rotate(calc(360deg / 8 * var(--j)));
+      animation-name: triangle;
+        transform-origin: 0px 0px;
+      animation-iteration-count: 1;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+     
+  }
+  
+  
+  @keyframes triangle {
+      0%{
+      opacity: 0;
+  }
+  5% {
+      opacity: 1;
+  }
+  
+  30% {
+      opacity: 1;
+      transform: rotate(calc(360deg / 8 * var(--j))) translateX(-81px);
+      scale: 3;
+      border-color: transparent transparent #bef724 #ff000000;
+      box-shadow: 0px 0px 20px 1px hsl(0deg 100% 42%), 0px 0px 20px 1px #d11d1d, 0px 0px 20px 2px #d9e70c;
+  }
+  32% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 0;
+  }
+  }
+/*--------------- triangle element section ---------------*/
+
+
+
+.light__wave {
+    position: absolute;
+    opacity: 0;
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    z-index: 0;
+    transform: scale(2.5, 2.5);
+    border: 2px solid rgb(217 0 0);
+    box-shadow: 0px 0px 20px 1px hsl(0deg 100% 42%), inset 0px 0px 20px 12px #d11d1d, 0px 0px 7px 3px #d9e70c;
+    animation: expand 2s 1 linear;
+}
+
+
+@keyframes expand-light {
+  10%,29%,59%,89% {
+    transform:  scale(0, 0);
+    border: 2px solid rgba(255, 255, 255, 0);
+    
+  }
+  90%,20%,50% {
+    transform:  scale(1, 1);
+    
+  }
+  95%,96%,26%,27%,56%,57% {
+    transform:  scale(2, 2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+  0%,28%,58%,100% {
+    transform:  scale(2.5, 2.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes expand {
+	0% {
+    opacity: 0;
+}
+5% {
+    opacity: 0;
+}
+
+30% {
+    opacity: 1;
+    transform: scale(0.1);
+}
+100% {
+    opacity: 0;
+    transform: scale(30);
+}
+  
+  
+}
