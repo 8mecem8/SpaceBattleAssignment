@@ -42,10 +42,14 @@ export class Ship
     {   
         if(document.querySelector(`#enemy${id}`))
         {
-         //document.querySelector(`#enemy${id}`).style.filter= 'invert()';
+        
+            document.querySelector(`#enemy${id}`).style.animation = "none";//Previous animations must be deleted to next ones can work even if next ones are not animations
+            /* ---------- Load the music file and play  ---------- */
+            var audio =  new Audio('sounds/explosion.mp3', 100, true);
+            
         
 
-            
+            /* ---------- Explosion animation enemy html elements  ---------- */
             const enemyToGo = document.querySelector(`#enemy${id}`)
             const fragment = document.createDocumentFragment() // create and append new elements faster with method
 
@@ -82,11 +86,15 @@ export class Ship
 
             fragment.appendChild(explodeAni)
             enemyToGo.appendChild(fragment)
+            audio.play();
 
+            document.querySelector(`#enemy${id}`).style.transition = "4s";
+            setTimeout(() => {
+                document.querySelector(`#enemy${id}`).style.filter= 'invert()';
+                document.querySelector(`#enemy${id}`).style.transform = "translate3d(300px, 102vh, 0px)  skew(0deg, 38deg) rotateZ(43deg)" 
+            }, 1000);//have to wait little bit to apply the transformation effect
 
-
-
-         setTimeout(() => {document.querySelector(`#enemy${id}`).remove()}, 2000);
+            setTimeout(() => {/* document.querySelector(`#enemy${id}`).remove() */;audio.pause()}, 4000); // enemyships sent to out of the screen will be deleted before nextgame function !!
         }
     }
 

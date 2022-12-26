@@ -80,7 +80,7 @@ export const gameEngine= async function()
 
             switch (result) {
                 case 'nextLevel':
-                   await nextWave()
+                    document.querySelector("#mGS-section3-field-enemy").replaceChildren() ;await nextWave() //first delete all old wave enemyships then to go new game 
                     break;
 
                 case 'restart':
