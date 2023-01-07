@@ -52,14 +52,14 @@
 .enemy:nth-child(even){
     transform: translate3d(100vh,100vh,0);
     animation: ufoMoveEven linear infinite;
-    animation-delay: 7s;/* need this delay for ufos enterance animation for happen */
+    animation-delay: 9s;/* need this delay for ufos enterance animation for happen */
  
 
 }
 .enemy:nth-child(odd){
     transform: translate3d(100vh,-100vh,0);
     animation: ufoMoveOdd ease-in-out infinite;
-    animation-delay: 7s;/* need this delay for ufos enterance animation for happen */
+    animation-delay: 9s;/* need this delay for ufos enterance animation for happen */
 
 
 }

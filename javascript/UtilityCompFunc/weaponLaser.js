@@ -27,7 +27,7 @@ export const drawWeaponLaser = async(attacker,defender)=>
 
         /* --------------- Laser Css animation Before inserting the element -------------- */
         let enemyPositonY = defender.id == "HERO" ? document.querySelector(`#enemy${attacker.id}`).getBoundingClientRect().y : document.querySelector(`#enemy${defender.id}`).getBoundingClientRect().y
-        let angle = attacker.id == "HERO"?  enemyPositonY < 300 ? -27 :  enemyPositonY > 500 ? 36 : 0 :0
+        let angle = attacker.id == "HERO"?    enemyPositonY < 300 ? -27 :   enemyPositonY > 700 ? 19 : enemyPositonY > 500 ? 7 : 0 : 0
 
         if(attacker.id == "HERO")
         {wLaser.style.transform =`rotateZ(${angle}deg)`}

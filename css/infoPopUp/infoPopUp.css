@@ -64,6 +64,7 @@ transition-delay: 1s;
     letter-spacing: 0.5px;
     font-family: monospace;
     position: relative;
+    box-shadow: inset -2px -1px 20px 0px black, inset -2px -1px 20px 6px #0abaff, 0px 0px 20px 4px #3a6f97;
 }
 
 
@@ -86,4 +87,9 @@ transition-delay: 1s;
     border: none;
     font-size: 21px;
     text-shadow: 0px 0px 3px #6e6767;
+}
+
+
+#infoPopUpMessage > p {
+    filter: drop-shadow(2px 4px 6px black);
 }

@@ -21,7 +21,7 @@ infoPop.innerHTML= `
                 <p>
                     Hello Dear User/Visitor 👋<br><br><br>
                     This Html game created as a bootcamp Project, Tech Stack is Html, Css, Javascript <br><br> 
-                    Game's type is mixed of turn-based & text-based with some added simple graphics & sounds & Css animations<br><br><br>
+                    Game's type is mixture of turn-based & text-based with some added simple graphics & sounds & Css animations<br><br><br>
                     How to Play:<br><br>
                     Follow the Captain's log and click/press/select on Buttons/options when available/clickable/selectable<br><br><br>
                     Graphics & Sounds & other materials used in the game are not mine & found/selected randomly from search engines<br><br><br>
