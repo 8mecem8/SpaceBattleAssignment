@@ -121,7 +121,35 @@ What does this mean for your coding practices?
 Your code should be as coherent to another developer as possible.
 
 
+![image](https://user-images.githubusercontent.com/42888722/215939908-3b7c115b-8a79-4fea-99c2-bc8c87bdd375.png)
 
+
+
+
+![image](https://user-images.githubusercontent.com/42888722/215939984-a89871b2-77b8-4611-93be-30138ba767ef.png)
+
+
+
+![image](https://user-images.githubusercontent.com/42888722/215940073-20e2d465-e921-4dd1-9293-d2efb1d6735d.png)
+
+
+
+![image](https://user-images.githubusercontent.com/42888722/215940156-a764eb97-3dd1-413e-820d-273849641bb6.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/42888722/215940258-21cbf9cf-27b0-43cd-94de-a15c4724a89e.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/42888722/215940403-d1f9a64b-f50f-4715-b473-350dcd8a22bc.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/42888722/215941502-b988af0d-ce8a-4fbb-a76f-82ab95dad3d2.png)
 
 
 
